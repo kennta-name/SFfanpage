@@ -1,0 +1,131 @@
+:root {
+    --bg: #050508;
+    --black: #000000;
+    --ink: #f4f7ff;
+    --muted: #9aa6c2;
+    --line: #1ea7ff;
+    --fade: #0b5cff;
+    --face-width: 132px;
+    --banner-height: 70px;
+    --sans: 'Noto Sans JP', system-ui, sans-serif;
+    --display: 'Barlow Condensed', 'Noto Sans JP', sans-serif;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background:radial-gradient(1200px 420px at 80% -10%, rgba(30,167,255,0.16), transparent 55%),
+    var(--bg);
+    color:var(--ink);
+    font-family: var(--sans);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+.eyebrow {
+    margin:0 0 8px;
+    color: var(--line);
+    font-family: var(--display);
+    font-size:13px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+h1 { 
+    margin:0 0 12px;
+    font-family: var(--display);
+    font-size: clamp(36px, 7vw, 64px);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin: 0 0 14px;
+    font-family: var(--display);
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    height: var(--banner-height);
+    overflow: hidden;
+    background: var(--back);
+    text-decoration: none;
+}
+
+.banner--link:focus-visible {
+    outline: 2px solid var(--line);
+    outline-offset: 4px;
+}
+
+.banner_line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 3;
+    background: linear-gradient(90deg, #063a88, var(--line) 18%, #7ec8ff 50%, var(--line) 82%, #063a88);
+}
+
+.banner_line--top {
+    top: 0;
+}
+
+.banner_face {
+    position: relative;
+    z-index:2;
+    flex: 0 0 var(--face-width);
+    height: 100%;
+    overflow: hidden;
+}
+
+.banner_face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner_name {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 18px;
+    font-family: var(--display);
+    font-size: clamp(28px, 5.2vw, 46px);
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-shadow: 0 2px 0 #000;
+}
+
+.banner_blank {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    min-width: 72px;
+    background: linear-gradient(to right, var(--black) 0%, #041028 38%, var(--fade) 100%);
+}
+
+.face-aki {
+    object-position: center 10%;
+}
