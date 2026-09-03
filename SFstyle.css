@@ -129,3 +129,10 @@ h2 {
 .face-aki {
     object-position: center 10%;
 }
+
+.footnote {
+    margin: 36px 0 0;
+    color: #6d7894;
+    font-size: 12px;
+    line-height: 1.6;
+}
